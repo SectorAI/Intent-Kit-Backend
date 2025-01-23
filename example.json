@@ -1,0 +1,85 @@
+{
+  "id": "K9N8wYJReJZENCkiYmNM",
+  "name": "Build",
+  "ticker": "BUILD",
+  "description": "Trong màn đầu tiên, mô tả Agent Description ",
+  "goal": "Màn hình đầu tiên, mô tả Agent Goal",
+  "worldInfo": "Màn hình đầu tiên tab News",
+  "monitoredAccounts": [
+    {
+      "username": "ai16bAi",
+      "reason": "Vẫn là màn hình đầu tiên tab News",
+      "avatar": null
+    },
+    {
+      "username": "elonmusk",
+      "reason": "follow the richest in the world",
+      "avatar": null
+    }
+  ],
+  "username": "config trong mục 3",
+  "promptConfig": {
+    "POST": {
+      "userPrompt": "Màn hình thứ 2 phần `Response Config` POSTT",
+      "temperature": 70,
+      "topK": 0,
+      "topP": 1,
+      "repetitionPenalty": 1,
+      "interval": "15",
+      "responses": [
+        { "words": 10 },
+        { "words": 20 },
+        { "words": 40 },
+        { "words": 60 },
+        { "words": 80 }
+      ]
+    },
+    "REPLY": {
+      "userPrompt": "Mafn hình thứ 2 phần `Response Config` REPLY",
+      "temperature": 70,
+      "topK": 0,
+      "topP": 1,
+      "repetitionPenalty": 1,
+      "interval": "30",
+      "responses": [
+        { "words": 15 },
+        { "words": 25 },
+        { "words": 45 },
+        { "words": 65 },
+        { "words": 85 }
+      ]
+    },
+    "systemPrompts": {
+      "startPrompt": "Start Prompt mục 2 phần system config",
+      "template": "Mục 2",
+      "endPrompt": "Mucj 2"
+    }
+  },
+  "customFunctions": [
+    {
+      "name": "Đay là phần 3 có thể thêm mới ",
+      "description": "Get volume of pair in dexscreener",
+      "hint": "",
+      "arguments": [
+        {
+          "name": "pair_id",
+          "description": "Pair id",
+          "type": "string",
+          "optional": false
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "url": "https://api.dexscreener.com/latest/dex/pairs/zksync/0x9bec30fd825f5e8e9bc6a84914b8a3ab31742103",
+        "headers": {},
+        "body": {}
+      },
+      "response": {
+        "success": "volume 24h: {{response.pairs[0].volume.h24}}",
+        "error": ""
+      },
+      "id": "get_volume",
+      "isCustom": true
+    }
+  ]
+}
