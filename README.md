@@ -3,7 +3,7 @@
     <a href="https://nodejs.org/" target="_blank">
        <img src="https://img.shields.io/badge/NodeJS-76AE64?style=flat-square" alt="Y Combinator W23">
     </a>
-    <a href="[https://nodejs.org/](https://nestjs.com/)" target="_blank">
+    <a href="https://nestjs.com/" target="_blank">
        <img src="https://img.shields.io/badge/NestJS-E42751?style=flat-square" alt="Y Combinator W23">
         </a>
     <a href="https://www.postgresql.org/" target="_blank">
